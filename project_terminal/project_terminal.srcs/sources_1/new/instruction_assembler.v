@@ -28,6 +28,7 @@ output reg instr_valid
     3'b011: instruction_assemblied <= {imm[31:12],rd,opcode};
     3'b100: instruction_assemblied <= {imm[12],imm[10:5],rs2,rs1,func3,imm[4:1],imm[11],opcode};
     3'b101: instruction_assemblied <= {imm[11:5],rs2,rs1,func3,imm[4:0],opcode};
+    3'b110: instruction_assemblied <= {imm[20],imm[10:1],imm[11],imm[19:12],rd,opcode};
     default: instruction_assemblied <= 32'h00000013; 
     endcase
     end
