@@ -68,7 +68,7 @@ end
     //S-type
     "SW  ":begin  imm <= imm_in; rs1 <= rs1_in; rs2 <= rs2_in; func3 <= 3'b010; opcode <= 7'b0100011;    rd<=0; func7<=0; end
     //J-type
-    "JAL ": begin imm <= im_in; rs1 <= 0; rs2 <= 0; rd <= 0; func3 <= 0; func7 <= 0; rd <= rd_in; opcode <= 7'b1101111; end
+    "JAL ": begin imm <= imm_in; rs1 <= 0; rs2 <= 0; rd <= 0; func3 <= 0; func7 <= 0; rd <= rd_in; opcode <= 7'b1101111; end
     
     default: begin  func7 <=7'b000000; rs1 <= 0; rs2 <= 0; func3 <= 3'b000; rd <= rd_in; opcode <= 7'b0000000;  imm <= 0; end
      endcase 
