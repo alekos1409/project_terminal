@@ -28,7 +28,7 @@ assign func7_5 = InstrD[30];
 
 register_file register_file(
     .clk(clk),
-    .reset(reset)
+    .reset(reset),
     .we(RegWriteW),
     .rs1_addr(Rs1D),
     .rs2_addr(Rs2D),
