@@ -1,6 +1,6 @@
 
 module decode(reset,Imm_outE,PCD,PCplus4D,InstrD,PCE,RD1E,RD2E,PCplus4E,RegWriteW,clk,ResultW, RegWriteE,MemWriteE,JumpE,BranchE,
-ALUSrcE,MemReadE,MemToRegE,RdE,ALUOpE,RdW,ALUcontrolE,Rs1E,Rs2E,Rs1D,Rs2D,flushE,stallD);
+ALUSrcE,MemReadE,MemToRegE,RdE,ALUOpE,RdW,ALUcontrolE,Rs1E,Rs2E,Rs1D,Rs2D,flushE,stallD,InstrE);
 input [31:0]PCD,PCplus4D,InstrD,ResultW;
 input RegWriteW,clk,reset,flushE;
 input stallD;
@@ -14,6 +14,7 @@ output reg [2:0]ALUcontrolE;
 wire [31:0]Imm_outD,RD1D,RD2D;
 wire [4:0] RdD;
 output [4:0]Rs1D,Rs2D;
+output [31:0]InstrE;
 wire [6:0]op;
 wire [2:0]func3,ALUcontrolD;
 wire [1:0]ALUOpD;
@@ -77,6 +78,7 @@ always @(posedge clk)begin
     RD2E        <= 0;
     Rs1E        <= 0;
     Rs2E        <= 0;
+    InstrE <= 0;
     end
     else begin
         if(stallD) begin
@@ -95,6 +97,7 @@ always @(posedge clk)begin
         RD1E       <= 0;
         RD2E       <= 0;
         Imm_outE   <= 0;
+        InstrE <= 0;
 end
     else begin
 RegWriteE<=RegWriteD;
@@ -114,6 +117,7 @@ RD1E <= RD1D;
 RD2E <= RD2D;
 Rs1E <= Rs1D;
 Rs2E <= Rs2D;
+InstrE <= InstrD;
 end
 end
 end

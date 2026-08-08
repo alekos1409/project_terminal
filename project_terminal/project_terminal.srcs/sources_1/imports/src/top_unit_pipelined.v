@@ -22,6 +22,7 @@ ResultW,PCE,PCplus4E,RD1E,RD2E,Imm_outE,ALuResultM,WriteDataM,
 PCplus4M,slt,PCplus4W,ALuResultW,ReadDataW,SrcAE,SrcBE;
 reg CLK50MHZ=0;    
 wire [31:0]keycode;
+wire [31:0]InstrE;
 wire [7:0]scan_key;
 wire [7:0]ascii_conv;
 wire busy ;
@@ -90,7 +91,8 @@ end
       .Rs1D(Rs1D),
       .Rs2D(Rs2D),
       .flushE(flushE),
-      .stallD(stallD)
+      .stallD(stallD),
+      .InstrE(InstrE)
   );
   execute execute (
       .PCE(PCE),
@@ -124,7 +126,8 @@ end
       .MemWriteM(MemWriteM),
       .MemToRegM(MemToRegM),
       .SrcAE(SrcAE),
-      .SrcBE(SrcBE)
+      .SrcBE(SrcBE),
+      .InstrE(InstrE)
   );
   memory_access memory_access (
       .ALuResultM(ALuResultM),
