@@ -48,7 +48,6 @@ end
     rs1 <= 0;
     rs2 <= 0;
     rd <= 0;
-    format_tag <= 0;
     end
     else if(line_ready_d1) begin
     case(mnemonic_d1)

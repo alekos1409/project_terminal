@@ -14,7 +14,7 @@ output reg [2:0]ALUcontrolE;
 wire [31:0]Imm_outD,RD1D,RD2D;
 wire [4:0] RdD;
 output [4:0]Rs1D,Rs2D;
-output [31:0]InstrE;
+output reg [31:0]InstrE;
 wire [6:0]op;
 wire [2:0]func3,ALUcontrolD;
 wire [1:0]ALUOpD;
@@ -28,6 +28,7 @@ assign func7_5 = InstrD[30];
 
 register_file register_file(
     .clk(clk),
+    .reset(reset)
     .we(RegWriteW),
     .rs1_addr(Rs1D),
     .rs2_addr(Rs2D),
