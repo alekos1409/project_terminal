@@ -1,0 +1,473 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 17-jul-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Aug 16 14:18:25 2026
+# Process ID         : 15496
+# Current directory  : D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.runs/synth_1
+# Command line       : vivado.exe -log top_unit_pipelined.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_unit_pipelined.tcl
+# Log file           : D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.runs/synth_1/top_unit_pipelined.vds
+# Journal file       : D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-64BO2FPL
+# Platform           : Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+# CPU Frequency      : 2096 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 6378 MB
+# Swap memory        : 9803 MB
+# Total Virtual      : 16181 MB
+# Available Virtual  : 5149 MB
+#-----------------------------------------------------------
+source top_unit_pipelined.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 581.949 ; gain = 268.754
+Command: synth_design -top top_unit_pipelined -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 732
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1360.238 ; gain = 577.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_unit_pipelined' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/top_unit_pipelined.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fetch' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/fetch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'fetch' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/fetch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decode' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/decode.v:2]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/register_file.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/register_file.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imm_gen' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/imm_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'imm_gen' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/imm_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/control_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/control_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu_control' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/alu_control.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/alu_control.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/alu_control.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decode' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/decode.v:2]
+INFO: [Synth 8-6157] synthesizing module 'execute' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift_logic' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/shift_logic.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shift_logic' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/shift_logic.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'execute' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/execute.v:1]
+INFO: [Synth 8-6157] synthesizing module 'memory_access' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/memory_access.v:2]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/data_memory.v:1]
+INFO: [Synth 8-6157] synthesizing module 'bus_interconnect' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/bus_interconnect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bus_interconnect' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/bus_interconnect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'memory_access' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/memory_access.v:2]
+INFO: [Synth 8-6157] synthesizing module 'write_back' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/write_back.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'write_back' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/write_back.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_forwarding_unit' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/hazard_forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_forwarding_unit' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/hazard_forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hazard_control_unit' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/hazard_control_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_control_unit' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/hazard_control_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'seg7decimal' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/hdl/Seg_7_Display.v:21]
+INFO: [Synth 8-226] default block is never used [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/hdl/Seg_7_Display.v:45]
+INFO: [Synth 8-226] default block is never used [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/hdl/Seg_7_Display.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'seg7decimal' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/hdl/Seg_7_Display.v:21]
+INFO: [Synth 8-6157] synthesizing module 'UART_rx' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/UART/UART_rx.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'UART_rx' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/UART/UART_rx.v:2]
+INFO: [Synth 8-6157] synthesizing module 'tokenizer' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/tokenizer.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'tokenizer' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/tokenizer.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mnemonic_decoder' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/mnemonic_decoder.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mnemonic_decoder' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/mnemonic_decoder.v:2]
+INFO: [Synth 8-6157] synthesizing module 'operand_interpreter' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/operand_interpreter.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/operand_interpreter.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'operand_interpreter' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/operand_interpreter.v:2]
+INFO: [Synth 8-6157] synthesizing module 'instruction_assembler' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/instruction_assembler.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_assembler' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/new/instruction_assembler.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top_unit_pipelined' (0#1) [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/top_unit_pipelined.v:1]
+WARNING: [Synth 8-6014] Unused sequential element CLK50MHZ_reg was removed.  [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/top_unit_pipelined.v:51]
+WARNING: [Synth 8-3848] Net UART_TXD in module/entity top_unit_pipelined does not have driver. [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/top_unit_pipelined.v:9]
+WARNING: [Synth 8-7129] Port token1[95] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[94] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[93] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[92] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[91] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[90] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[89] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[88] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[87] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[86] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[85] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[71] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[70] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[69] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[68] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[67] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[66] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[65] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[64] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[63] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[62] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[61] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[60] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[59] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[58] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[57] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[56] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[55] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[54] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[53] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[52] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[51] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[50] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[49] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[48] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[47] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[46] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[45] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[44] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[43] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[42] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[41] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[40] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[39] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[38] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[37] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[36] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[35] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[34] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[33] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[32] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[31] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[30] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[29] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[28] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[27] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[26] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[25] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[24] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[23] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[22] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[21] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[20] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[19] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[18] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[17] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[16] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[15] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[14] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[13] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[12] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[11] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[10] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[9] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[8] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[7] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[6] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[5] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[4] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[3] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[2] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[1] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port token1[0] in module operand_interpreter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module bus_interconnect is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module bus_interconnect is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[31] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[30] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[29] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[28] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[27] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[26] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[25] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[24] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[23] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[22] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[21] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[20] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[19] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[18] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[17] in module data_memory is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1501.727 ; gain = 719.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1501.727 ; gain = 719.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1501.727 ; gain = 719.172
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1501.727 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_unit_pipelined_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_unit_pipelined_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1575.094 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 1576.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1576.008 ; gain = 793.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1576.008 ; gain = 793.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 1576.008 ; gain = 793.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_rx'
+WARNING: [Synth 8-327] inferring latch for variable 'rs1_data_reg' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/register_file.v:28]
+WARNING: [Synth 8-327] inferring latch for variable 'rs2_data_reg' [D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.srcs/sources_1/imports/src/register_file.v:29]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+            rx_data_read |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'User encoding' in module 'UART_rx'
+WARNING: [Synth 8-13157] FSM with state register 'state_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:51 . Memory (MB): peak = 1576.008 ; gain = 793.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 10    
+	   3 Input   32 Bit       Adders := 42    
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               96 Bit    Registers := 3     
+	               32 Bit    Registers := 57    
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 11    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
++---Multipliers : 
+	               4x32  Multipliers := 42    
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 17    
+	   4 Input   96 Bit        Muxes := 7     
+	   5 Input   96 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 73    
+	   4 Input   32 Bit        Muxes := 4     
+	   8 Input   32 Bit        Muxes := 1     
+	   4 Input   14 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   8 Input    5 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 53    
+	   4 Input    1 Bit        Muxes := 9     
+	   5 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 3     
+	   8 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:50 . Memory (MB): peak = 1873.652 ; gain = 1091.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+----------------------+-----------+----------------------+------------------+
+|Module Name   | RTL Object           | Inference | Size (Depth x Width) | Primitives       | 
++--------------+----------------------+-----------+----------------------+------------------+
+|memory_access | data_memory/regs_reg | Implied   | 1 K x 32             | RAM256X1S x 128  | 
++--------------+----------------------+-----------+----------------------+------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:02:00 . Memory (MB): peak = 1873.652 ; gain = 1091.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:29 . Memory (MB): peak = 2047.555 ; gain = 1265.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------+----------------------+-----------+----------------------+------------------+
+|Module Name   | RTL Object           | Inference | Size (Depth x Width) | Primitives       | 
++--------------+----------------------+-----------+----------------------+------------------+
+|memory_access | data_memory/regs_reg | Implied   | 1 K x 32             | RAM256X1S x 128  | 
++--------------+----------------------+-----------+----------------------+------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:15 ; elapsed = 00:02:37 . Memory (MB): peak = 2065.836 ; gain = 1283.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:25 ; elapsed = 00:02:47 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:25 ; elapsed = 00:02:47 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:26 ; elapsed = 00:02:48 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:26 ; elapsed = 00:02:48 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:26 ; elapsed = 00:02:49 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:26 ; elapsed = 00:02:49 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |   629|
+|3     |LUT1      |    97|
+|4     |LUT2      |  1627|
+|5     |LUT3      |   705|
+|6     |LUT4      |   783|
+|7     |LUT5      |  1109|
+|8     |LUT6      |  2372|
+|9     |MUXF7     |   260|
+|10    |RAM256X1S |   128|
+|11    |FDRE      |  1838|
+|12    |FDSE      |    31|
+|13    |LD        |    64|
+|14    |IBUF      |     3|
+|15    |OBUF      |    24|
+|16    |OBUFT     |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:26 ; elapsed = 00:02:49 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 106 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:07 ; elapsed = 00:02:35 . Memory (MB): peak = 2082.422 ; gain = 1225.586
+Synthesis Optimization Complete : Time (s): cpu = 00:02:27 ; elapsed = 00:02:50 . Memory (MB): peak = 2082.422 ; gain = 1299.867
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2091.613 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1081 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2095.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 192 instances were transformed.
+  LD => LDCE: 64 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 128 instances
+
+Synth Design complete | Checksum: ff98509c
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+67 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:39 ; elapsed = 00:03:20 . Memory (MB): peak = 2095.305 ; gain = 1513.355
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.549 . Memory (MB): peak = 2095.305 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.runs/synth_1/top_unit_pipelined.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2095.305 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_unit_pipelined_utilization_synth.rpt -pb top_unit_pipelined_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 16 14:22:34 2026...
