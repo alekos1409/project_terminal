@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/project_terminal_write_last/project_terminal_write_last.runs/impl_1/top_unit_pipelined.tcl"
+  variable script "D:/project_terminal_problem_solve/project_terminal_problem_solve.runs/impl_1/top_unit_pipelined.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,15 +114,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/project_terminal_write_last/project_terminal_write_last.cache/wt [current_project]
-  set_property parent.project_path D:/project_terminal_write_last/project_terminal_write_last.xpr [current_project]
+  set_property webtalk.parent_dir D:/project_terminal_problem_solve/project_terminal_problem_solve.cache/wt [current_project]
+  set_property parent.project_path D:/project_terminal_problem_solve/project_terminal_problem_solve.xpr [current_project]
   set_property ip_output_repo D:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/project_terminal_write_last/project_terminal_write_last.runs/synth_1/top_unit_pipelined.dcp
+  add_files -quiet D:/project_terminal_problem_solve/project_terminal_problem_solve.runs/synth_1/top_unit_pipelined.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/project_terminal_write_last/project_terminal_write_last.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc
+  read_xdc D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

@@ -19,43 +19,47 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module seg7decimal(
-
-	input [31:0] x,
+    input [4:0]RdW,
+  	input [31:0] x,
     input clk,
     output reg [6:0] seg,
     output reg [7:0] an,
     output wire dp 
 	 );
-	 
-	 
+    
 wire [2:0] s;	 
 reg [3:0] digit;
 wire [7:0] aen;
 reg [19:0] clkdiv;
-
+reg [31:0]aluresult;
 assign dp = 1;
 assign s = clkdiv[19:17];
 assign aen = 8'b11111111; // all turned off initially
 
 // quad 4to1 MUX.
 
+always @(posedge clk)
+if( RdW != 5'b0)
+aluresult <= x;
+    
+
 
 always @(posedge clk)// or posedge clr)
-	
 	case(s)
-	0:digit = x[3:0]; // s is 00 -->0 ;  digit gets assigned 4 bit value assigned to x[3:0]
-	1:digit = x[7:4]; // s is 01 -->1 ;  digit gets assigned 4 bit value assigned to x[7:4]
-	2:digit = x[11:8]; // s is 10 -->2 ;  digit gets assigned 4 bit value assigned to x[11:8
-	3:digit = x[15:12]; // s is 11 -->3 ;  digit gets assigned 4 bit value assigned to x[15:12]
-	4:digit = x[19:16]; // s is 00 -->0 ;  digit gets assigned 4 bit value assigned to x[3:0]
-    5:digit = x[23:20]; // s is 01 -->1 ;  digit gets assigned 4 bit value assigned to x[7:4]
-    6:digit = x[27:24]; // s is 10 -->2 ;  digit gets assigned 4 bit value assigned to x[11:8
-    7:digit = x[31:28]; // s is 11 -->3 ;  digit gets assigned 4 bit value assigned to x[15:12]
+	0:digit = aluresult[3:0]; // s is 00 -->0 ;  digit gets assigned 4 bit value assigned to x[3:0]
+	1:digit = aluresult[7:4]; // s is 01 -->1 ;  digit gets assigned 4 bit value assigned to x[7:4]
+	2:digit = aluresult[11:8]; // s is 10 -->2 ;  digit gets assigned 4 bit value assigned to x[11:8
+	3:digit = aluresult[15:12]; // s is 11 -->3 ;  digit gets assigned 4 bit value assigned to x[15:12]
+	4:digit = aluresult[19:16]; // s is 00 -->0 ;  digit gets assigned 4 bit value assigned to x[3:0]
+    5:digit = aluresult[23:20]; // s is 01 -->1 ;  digit gets assigned 4 bit value assigned to x[7:4]
+    6:digit = aluresult [27:24]; // s is 10 -->2 ;  digit gets assigned 4 bit value assigned to x[11:8
+    7:digit = aluresult[31:28]; // s is 11 -->3 ;  digit gets assigned 4 bit value assigned to x[15:12]
 
-	default:digit = x[3:0];
+	default:digit = aluresult[3:0];
 	
 	endcase
 	
+	 
 	//decoder or truth-table for 7seg display values
 	always @(*)
 

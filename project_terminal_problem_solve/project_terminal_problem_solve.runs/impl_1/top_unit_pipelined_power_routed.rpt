@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date             : Wed Aug 19 16:42:05 2026
+| Date             : Thu Aug 20 15:08:46 2026
 | Host             : LAPTOP-64BO2FPL running 64-bit major release  (build 9200)
 | Command          : report_power -file top_unit_pipelined_power_routed.rpt -pb top_unit_pipelined_power_summary_routed.pb -rpx top_unit_pipelined_power_routed.rpx
 | Design           : top_unit_pipelined
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.112        |
+| Total On-Chip Power (W)  | 0.110        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.015        |
+| Dynamic (W)              | 0.013        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        3 |       --- |             --- |
-| Slice Logic              |     0.004 |     8685 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     5203 |     63400 |            8.21 |
+| Slice Logic              |     0.004 |     8719 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     5070 |     63400 |            8.00 |
 |   LUT as Distributed RAM |    <0.001 |      556 |     19000 |            2.93 |
 |   CARRY4                 |    <0.001 |      629 |     15850 |            3.97 |
 |   F7/F8 Muxes            |    <0.001 |      388 |     63400 |            0.61 |
-|   Register               |    <0.001 |      877 |    126800 |            0.69 |
+|   Register               |    <0.001 |      909 |    126800 |            0.72 |
 |   Others                 |     0.000 |       15 |       --- |             --- |
-| Signals                  |     0.005 |     6811 |       --- |             --- |
-| I/O                      |     0.004 |       28 |       210 |           13.33 |
+| Signals                  |     0.005 |     6783 |       --- |             --- |
+| I/O                      |     0.003 |       28 |       210 |           13.33 |
 | Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.112 |          |           |                 |
+| Total                    |     0.110 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.026 |       0.011 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.025 |       0.010 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,7 +142,7 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| top_unit_pipelined |     0.015 |
+| top_unit_pipelined |     0.013 |
 |   execute          |     0.003 |
 |   memory_access    |     0.002 |
 |     data_memory    |     0.002 |

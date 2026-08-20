@@ -66,7 +66,7 @@ end
     
     "LW  ": begin imm <= imm_in; rs1 <= rs1_in; func3 <= 3'b010; rd <= rd_in; opcode <= 7'b0000011;   rs2 <= 0; func7 <=0; end
     //U-type
-    "LUI ": begin imm <= imm_in; rd <= rd_in; opcode <= 7'b0110111;        rs1 <=0; rs2 <=0; func7 <=0; func3 <=0; end 
+    "LUI ": begin imm <= imm_in; rd <= rd_in; opcode <= 7'b0110111; rs1 <=0; rs2 <=0; func7 <=0; func3 <=0; end 
     //B-type
     "BEQ ":begin imm <= imm_in; rs1 <= rs1_in; rs2 <= rs2_in; func3 <= 3'b000; opcode <= 7'b1100011;   rd<=0; func7<=0; end
     "BNE ":begin imm <= imm_in; rs1 <= rs1_in; rs2 <= rs2_in; func3 <= 3'b001; opcode <= 7'b1100011;   rd<=0; func7<=0; end

@@ -21,6 +21,7 @@ always @(*)begin
     else if(func3 == 3'b110) ALUcontrol = 3'b011; 
     else if(func3 == 3'b111) ALUcontrol = 3'b010; 
     else if(func3 == 3'b010) ALUcontrol = 3'b101; 
+    else if(func3 == 3'b100) ALUcontrol = 3'b100;
 end
   endcase
 end

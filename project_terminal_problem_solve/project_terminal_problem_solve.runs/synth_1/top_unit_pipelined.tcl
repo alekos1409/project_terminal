@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/project_terminal_write_last/project_terminal_write_last.runs/synth_1/top_unit_pipelined.tcl"
+  variable script "D:/project_terminal_problem_solve/project_terminal_problem_solve.runs/synth_1/top_unit_pipelined.tcl"
   variable category "vivado_synth"
 }
 
@@ -65,38 +65,38 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/project_terminal_write_last/project_terminal_write_last.cache/wt [current_project]
-set_property parent.project_path D:/project_terminal_write_last/project_terminal_write_last.xpr [current_project]
+set_property webtalk.parent_dir D:/project_terminal_problem_solve/project_terminal_problem_solve.cache/wt [current_project]
+set_property parent.project_path D:/project_terminal_problem_solve/project_terminal_problem_solve.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/project_terminal-mainAAAAAAA/project_terminal-main/project_terminal/project_terminal.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/program.mem
+read_mem D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/program.mem
 read_verilog -library xil_defaultlib {
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/hdl/Seg_7_Display.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/UART/UART_rx.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/alu.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/alu_control.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/bus_interconnect.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/control_unit.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/data_memory.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/decode.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/execute.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/fetch.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/hazard_control_unit.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/hazard_forwarding_unit.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/imm_gen.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/instruction_assembler.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/memory_access.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/mnemonic_decoder.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/operand_interpreter.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/register_file.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/shift_logic.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/new/tokenizer.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/write_back.v
-  D:/project_terminal_write_last/project_terminal_write_last.srcs/sources_1/imports/src/top_unit_pipelined.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/hdl/Seg_7_Display.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/UART/UART_rx.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/alu.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/alu_control.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/bus_interconnect.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/control_unit.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/data_memory.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/decode.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/execute.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/fetch.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/hazard_control_unit.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/hazard_forwarding_unit.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/imm_gen.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/instruction_assembler.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/memory_access.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/mnemonic_decoder.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/operand_interpreter.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/register_file.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/shift_logic.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/new/tokenizer.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/write_back.v
+  D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/sources_1/imports/src/top_unit_pipelined.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,8 +107,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/project_terminal_write_last/project_terminal_write_last.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files D:/project_terminal_write_last/project_terminal_write_last.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc]
+read_xdc D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files D:/project_terminal_problem_solve/project_terminal_problem_solve.srcs/constrs_1/imports/constraints/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

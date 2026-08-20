@@ -191,7 +191,8 @@ end
 );
 */
 seg7decimal sevenSeg (
-.x(ALuResultM),
+.RdW(RdW),
+.x(ResultW),
 .clk(CLK100MHZ),
 .seg(SEG[6:0]),
 .an(AN[7:0]),

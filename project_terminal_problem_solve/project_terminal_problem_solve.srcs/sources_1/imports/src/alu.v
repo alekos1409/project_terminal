@@ -6,6 +6,8 @@ output zero;
 output carry,negative,overflow;
 wire [31:0]a_and_b,a_or_b,not_b,wire_b,sum;
 wire cout,xnor_gate,xor_gate;
+wire [31:0]a_xor_b;
+assign a_xor_b = a ^ b;
 assign a_and_b = a & b;
 assign a_or_b = a | b ;
 assign not_b = ~b;
@@ -16,6 +18,7 @@ assign result = (ALUcontrol[2:0] == 3'b000) ? sum:
                 (ALUcontrol[2:0] == 3'b001) ? sum:
                 (ALUcontrol[2:0] == 3'b010) ? a_and_b:
                  (ALUcontrol[2:0] == 3'b011) ? a_or_b:
+                 (ALUcontrol[2:0] == 3'b100) ? a_xor_b :
                  (ALUcontrol[2:0] == 3'b101) ? slt: 32'h00000000;
 assign carry = ~ALUcontrol[1] & cout;
 assign zero = &(~result);

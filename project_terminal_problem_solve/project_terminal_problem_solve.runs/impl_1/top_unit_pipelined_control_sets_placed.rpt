@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date         : Wed Aug 19 16:40:14 2026
+| Date         : Thu Aug 20 15:06:52 2026
 | Host         : LAPTOP-64BO2FPL running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_unit_pipelined_control_sets_placed.rpt
 | Design       : top_unit_pipelined
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    23 |
-|    Minimum number of control sets                        |    23 |
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    43 |
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    23 |
+| Total control sets |    24 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    17 |
+| >= 16              |    18 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              41 |           14 |
+| No           | No                    | No                     |              41 |           15 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             550 |          268 |
-| Yes          | No                    | No                     |               8 |            2 |
+| No           | Yes                   | No                     |             550 |          272 |
+| Yes          | No                    | No                     |              40 |            9 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             278 |          136 |
+| Yes          | Yes                   | No                     |             278 |          129 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,28 +74,29 @@ Table of Contents
 |     Clock Signal     |              Enable Signal             |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------+----------------------------------------+-----------------------------------+------------------+----------------+--------------+
 |  CLK100MHZ_IBUF_BUFG | tokenizer/E[0]                         | tokenizer/SR[0]                   |                2 |              5 |         2.50 |
-|  CLK100MHZ_IBUF_BUFG | tokenizer/mnemonic_reg[29]_0[0]        | tokenizer/SR[0]                   |                4 |              5 |         1.25 |
-|  CLK100MHZ_IBUF_BUFG | tokenizer/received_byte_reg[0][0]      | tokenizer/SR[0]                   |                2 |              5 |         2.50 |
-|  CLK100MHZ_IBUF_BUFG | execute/E[0]                           |                                   |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | tokenizer/mnemonic_reg[31]_0[0]        | tokenizer/SR[0]                   |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | tokenizer/received_byte_reg[0][0]      | tokenizer/SR[0]                   |                3 |              5 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | execute/E[0]                           |                                   |                1 |              8 |         8.00 |
 |  CLK100MHZ_IBUF_BUFG | decode/p_0_in                          | tokenizer/SR[0]                   |                3 |             10 |         3.33 |
 |  CLK100MHZ_IBUF_BUFG | UART_rx/cycle_counter[0]               | UART_rx/cycle_counter[13]_i_1_n_0 |                4 |             13 |         3.25 |
-|  CLK100MHZ_IBUF_BUFG | mnemonic_decoder/line_ready_d1_reg_n_0 | tokenizer/SR[0]                   |               12 |             26 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | mnemonic_decoder/line_ready_d1_reg_n_0 | tokenizer/SR[0]                   |               13 |             26 |         2.00 |
 |  CLK100MHZ_IBUF_BUFG | UART_rx/E[0]                           | tokenizer/SR[0]                   |               13 |             30 |         2.31 |
-|  CLK100MHZ_IBUF_BUFG | UART_rx/token_num_reg[0]_4[0]          | tokenizer/SR[0]                   |               15 |             30 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG | UART_rx/token_num_reg[1]_8[0]          | tokenizer/SR[0]                   |               10 |             30 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG | tokenizer/char_ptr[31]_i_1_n_0         | UART_rx/received_byte_reg[5]_0    |               21 |             30 |         1.43 |
-|  CLK100MHZ_IBUF_BUFG | decode/E[0]                            | decode/SR[0]                      |                8 |             31 |         3.88 |
-|  CLK100MHZ_IBUF_BUFG | mnemonic_decoder/line_ready_d2         | tokenizer/SR[0]                   |               19 |             31 |         1.63 |
-|  CLK100MHZ_IBUF_BUFG | tokenizer/received_byte_reg[0]_0[0]    | tokenizer/SR[0]                   |               23 |             32 |         1.39 |
-|  CLK100MHZ_IBUF_BUFG |                                        |                                   |               14 |             41 |         2.93 |
+|  CLK100MHZ_IBUF_BUFG | UART_rx/token_num_reg[0]_4[0]          | tokenizer/SR[0]                   |               12 |             30 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | UART_rx/token_num_reg[1]_8[0]          | tokenizer/SR[0]                   |               12 |             30 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | tokenizer/char_ptr[31]_i_1_n_0         | UART_rx/received_byte_reg[5]_0    |               18 |             30 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | decode/E[0]                            | decode/SR[0]                      |                6 |             31 |         5.17 |
+|  CLK100MHZ_IBUF_BUFG | mnemonic_decoder/line_ready_d2         | tokenizer/SR[0]                   |               16 |             31 |         1.94 |
+|  CLK100MHZ_IBUF_BUFG | tokenizer/mnemonic_reg[8]_0[0]         | tokenizer/SR[0]                   |               25 |             32 |         1.28 |
+|  CLK100MHZ_IBUF_BUFG | memory_access/E[0]                     |                                   |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                        |                                   |               15 |             41 |         2.73 |
 |  CLK100MHZ_IBUF_BUFG | memory_access/p_0_in__0                |                                   |               11 |             88 |         8.00 |
-|  CLK100MHZ_IBUF_BUFG |                                        | decode/Imm_outE[31]_i_1_n_0       |               56 |            126 |         2.25 |
-|  CLK100MHZ_IBUF_BUFG | execute/MemWriteM_reg_0                |                                   |               32 |            128 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG | execute/MemWriteM_reg_1                |                                   |               32 |            128 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG | execute/ALuResultM_reg[10]_0           |                                   |               32 |            128 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                        | decode/Imm_outE[31]_i_1_n_0       |               62 |            126 |         2.03 |
 |  CLK100MHZ_IBUF_BUFG | execute/ALuResultM_reg[11]_1           |                                   |               32 |            128 |         4.00 |
-|  CLK100MHZ_IBUF_BUFG |                                        | tokenizer/SR[0]                   |               94 |            184 |         1.96 |
-|  CLK100MHZ_IBUF_BUFG |                                        | UART_rx/received_byte_reg[5]_0    |              118 |            240 |         2.03 |
+|  CLK100MHZ_IBUF_BUFG | execute/MemWriteM_reg_0                |                                   |               32 |            128 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | execute/ALuResultM_reg[10]_0           |                                   |               32 |            128 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | execute/MemWriteM_reg_1                |                                   |               32 |            128 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                        | tokenizer/SR[0]                   |               95 |            184 |         1.94 |
+|  CLK100MHZ_IBUF_BUFG |                                        | UART_rx/received_byte_reg[5]_0    |              115 |            240 |         2.09 |
 +----------------------+----------------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

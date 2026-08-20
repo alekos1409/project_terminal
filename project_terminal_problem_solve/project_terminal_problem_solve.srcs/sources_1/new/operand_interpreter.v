@@ -96,12 +96,14 @@ module operand_interpreter(
     imm = imm*10 + (token2[i +: 8]-8'h30);
     end
     imm = ~imm + 1;
+     imm = imm << 12;
     end
          else begin
       for(i=88; i >= 0;i = i- 8)begin
        if(token2[i +: 8] != 8'h20 && token2[i +: 8] != 8'h2C)
    imm = imm*10 + (token2[i +: 8]-8'h30);
    end
+     imm = imm << 12;
    end
    end
        //B-type

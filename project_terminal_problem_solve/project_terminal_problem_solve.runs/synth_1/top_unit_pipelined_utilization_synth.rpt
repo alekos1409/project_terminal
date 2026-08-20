@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date         : Wed Aug 19 16:37:27 2026
+| Date         : Thu Aug 20 15:04:26 2026
 | Host         : LAPTOP-64BO2FPL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_unit_pipelined_utilization_synth.rpt -pb top_unit_pipelined_utilization_synth.pb
 | Design       : top_unit_pipelined
@@ -31,17 +31,17 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 5883 |     0 |          0 |     63400 |  9.28 |
-|   LUT as Logic             | 5323 |     0 |          0 |     63400 |  8.40 |
+| Slice LUTs*                | 5776 |     0 |          0 |     63400 |  9.11 |
+|   LUT as Logic             | 5216 |     0 |          0 |     63400 |  8.23 |
 |   LUT as Memory            |  560 |     0 |          0 |     19000 |  2.95 |
 |     LUT as Distributed RAM |  560 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            |  877 |     0 |          0 |    126800 |  0.69 |
-|   Register as Flip Flop    |  877 |     0 |          0 |    126800 |  0.69 |
+| Slice Registers            |  909 |     0 |          0 |    126800 |  0.72 |
+|   Register as Flip Flop    |  909 |     0 |          0 |    126800 |  0.72 |
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |  260 |     0 |          0 |     31700 |  0.82 |
 | F8 Muxes                   |  128 |     0 |          0 |     15850 |  0.81 |
-| Unique Control Sets        |   23 |       |          0 |     15850 |  0.15 |
+| Unique Control Sets        |   24 |       |          0 |     15850 |  0.15 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -64,7 +64,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 31    |          Yes |         Set |            - |
-| 846   |          Yes |       Reset |            - |
+| 878   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,17 +153,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 1858 |                 LUT |
-| LUT2     | 1629 |                 LUT |
-| LUT5     | 1094 |                 LUT |
-| FDRE     |  846 |        Flop & Latch |
-| LUT4     |  783 |                 LUT |
-| LUT3     |  716 |                 LUT |
+| LUT6     | 1594 |                 LUT |
+| LUT2     | 1483 |                 LUT |
+| LUT5     | 1192 |                 LUT |
+| LUT3     |  923 |                 LUT |
+| LUT4     |  890 |                 LUT |
+| FDRE     |  878 |        Flop & Latch |
 | CARRY4   |  629 |          CarryLogic |
 | RAMS64E  |  512 |  Distributed Memory |
 | MUXF7    |  260 |               MuxFx |
+| LUT1     |  147 |                 LUT |
 | MUXF8    |  128 |               MuxFx |
-| LUT1     |   97 |                 LUT |
 | RAMD32   |   68 |  Distributed Memory |
 | FDSE     |   31 |        Flop & Latch |
 | OBUF     |   24 |                  IO |
