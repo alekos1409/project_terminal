@@ -49,7 +49,7 @@ Serial connection: onboard USB-UART bridge (same micro-USB cable used for progra
 
 Line ending: send Carriage Return (\r, 0x0D) to submit a line — this is what triggers tokenization and assembly.
 A trailing Line Feed (0x0A) is explicitly ignored by the tokenizer so CRLF-sending terminals work fine.     
-## PROJECT EXAMPLE
+## EXAMPLE
 
 feedback from serial terminal 
 <img width="2548" height="1772" alt="IMG_5828" src="https://github.com/user-attachments/assets/e6bc7c17-f93b-41be-ba10-70d302389ea3" />
